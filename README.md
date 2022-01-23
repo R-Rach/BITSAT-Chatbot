@@ -1,5 +1,6 @@
 An AI powered contextual Chatbot assistant using RASA Framework for answering the queries of user about BITS Pilani entrance exam (BITSAT)
 
+CHATBOT SUPPORTS MULTIPLE INDIAN LANGUAGES AND VOICE INPUTS
 
 #HOW TO RUN
 
