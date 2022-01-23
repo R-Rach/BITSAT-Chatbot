@@ -1,0 +1,58 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- ask_iterations
+- ask_fee
+- thank
+- greet
+- ask_date
+- bio_eligibility
+- goodbye
+- ask_mail
+- foreign_citizens
+- edit_form
+responses:
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_dates:
+  - text: BITSAT is scheduled to be held from 16th to 23rd September.
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey, How can I assist you?
+  utter_iterations:
+  - text: There are four iterations for seat allocation.
+  utter_welcome:
+  - text: You are welcome!
+  utter_edit:
+  - text: The link for editing the application form will be made available on the
+      website during 15th May 2020 to 20th May 2020 and you can edit the required
+      fields during this period.  No email queries will be entertained in this regard.
+  utter_mail:
+  - text: The application cannot be sent by email/post. If you get any specific error
+      while applying, please send an email to bitsat2020@pilani.bits-pilani.ac.in
+      for help with details and queries will also be answered by the phone number-
+      022-61306284 during Monday-Friday 9.00am till 6.00pm.
+  utter_bio:
+  - text: Candidates can write BITSAT 2020 with Physics, Chemistry and Biology in
+      10+2. However, they will be eligible to apply only for the B. Pharm program.
+      They will not be eligible for any other first degree program of the Institute.
+  utter_fee:
+  - text: The fee details for 2020-21 are:[First Degree  ](https://www.bitsadmission.com/fdfee202021.aspx)[Higher
+      Degree](https://www.bitsadmission.com/hd/SCHEDULE%20OF%20FEES_Final.pdf)
+  utter_foreign:
+  - text: Candidates who have citizenship other than INDIA can apply under International
+      students admissions scheme.

@@ -1,0 +1,51 @@
+# language: hi
+# pipeline: supervised_embeddings
+
+
+# policies:
+#   - name: MemoizationPolicy
+#   - name: KerasPolicy
+#   - name: MappingPolicy
+
+
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: "hi"
+pipeline: 
+  - name: "WhitespaceTokenizer"
+  - name: "CRFEntityExtractor"
+  - name: "CountVectorsFeaturizer"
+  - name: DIETClassifier
+    similarity_type: cosine
+    loss_type: softmax
+    transformer_size: 256 # No of units trasformer
+    epochs: 100
+    evaluate_on_number_of_examples: 0
+    evaluate_every_number_of_epochs: 20
+    batch_size: [64, 256]
+    tensorboard_log_directory: "./tensorboard/hi/"
+    tensorboard_log_level: "epoch"
+  - name: EntitySynonymMapper
+  # - name: ResponseSelector
+  #   epochs: 100
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: TEDPolicy # KerasPolicy is deprecated
+    max_history: 10
+    epochs: 100
+    evaluate_on_number_of_examples: 0
+    evaluate_every_number_of_epochs: 5
+    tensorboard_log_directory: "./tensorboard/hi/"
+    tensorboard_log_level: "epoch"
+  # - name: FallbackPolicy #Testing
+  #   nlu_threshold: 0.01
+  #   core_threshold: 0.01
+  #   fallback_action_name: 'action_default_fallback'
+  - name: MemoizationPolicy
+    max_history: 5
+  - name: FormPolicy
+  - name: MappingPolicy
+  # - name: TwoStageFallbackPolicy

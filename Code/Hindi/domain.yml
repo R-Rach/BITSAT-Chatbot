@@ -1,0 +1,56 @@
+actions:
+- utter_bio
+- utter_dates
+- utter_edit
+- utter_fee
+- utter_foreign
+- utter_goodbye
+- utter_greet
+- utter_iterations
+- utter_mail
+- utter_welcome
+intents:
+- greet
+- thank
+- bio_eligibility
+- ask_fee
+- ask_date
+- ask_iterations
+- goodbye
+- ask_mail
+- ask_edit
+- foreign_citizens
+responses:
+  utter_bio:
+  - text: उम्मीदवार 10 + 2 में भौतिकी, रसायन विज्ञान और जीव विज्ञान के साथ BITSAT
+      2020 लिख सकते हैं। हालांकि, वे केवल बी-फार्म कार्यक्रम के लिए आवेदन करने के
+      पात्र होंगे। वे संस्थान के किसी भी अन्य फर्स्ट  डिग्री कार्यक्रम के लिए पात्र
+      नहीं होंगे।
+  utter_dates:
+  - text: BITSAT 16 से 23 सितंबर तक आयोजित किया जायेगा।
+  utter_edit:
+  - text: आवेदन पत्र को संपादित करने के लिए लिंक 15 मई 2020 से 20 मई 2020 के दौरान
+      वेबसाइट पर उपलब्ध कराया जाएगा और आप इस अवधि के दौरान आवश्यक फ़ील्ड संपादित कर
+      सकते हैं। इस संबंध में किसी भी ईमेल क्वेरी को स्वीकार नहीं किया जाएगा।
+  utter_fee:
+  - text: 2020-21 के लिए अंतिम शुल्क विवरण 25 जुलाई 2020 तक BITS एडमिशन वेबसाइट पर
+      उपलब्ध होगा।
+  utter_foreign:
+  - text: जिन उम्मीदवारों के पास भारत के अलावा अन्य नागरिकता है, वे अंतर्राष्ट्रीय
+      छात्र प्रवेश योजना के तहत आवेदन कर सकते हैं।
+  utter_goodbye:
+  - text: अलविदा
+  utter_greet:
+  - text: नमस्कार! मैं आपकी कैसे सहायता कर सकता हूँ ?
+  utter_iterations:
+  - text: सीट आवंटन के लिए चार पुनरावृत्तियों(iterations) हैं।
+  utter_mail:
+  - text: डाक अथवा ईमेल द्वारा ऍप्लिकेशन्स नहीं स्वीकारे जायेंगे। यदि आपको ऑनलइन एप्लीकेशन
+      में किसी प्रकार की असुविधा होती है तो कृपया सहायता के लिए bitsat2020@pilani.bits-pilani.ac.in  पर
+      ईमेल करें। फोन नंबर- 022-61306284 पर सोमवार-शुक्रवार सुबह 9.00 बजे से शाम 6:00
+      बजे तक प्रश्नों का उत्तर दिया जाएगा।
+  utter_welcome:
+  - text: आपका स्वागत है।
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 0
